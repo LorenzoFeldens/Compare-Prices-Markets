@@ -1,0 +1,16 @@
+﻿{
+  "Name": "iFood",
+  "Type": "Screen",
+  "Id": "nQa4Vi29T0uWFgOnWKC6XQ",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/IlFVcoMg5ES2e2nUIIPNbQ",
+  "Created": "2026-11-20T12:48:43.1383491Z",
+  "Updated": "2026-11-22T11:00:52.1018368Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

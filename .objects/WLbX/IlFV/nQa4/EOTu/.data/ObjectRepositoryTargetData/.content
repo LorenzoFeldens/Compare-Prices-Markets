@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Y6o-nq4bgkW8B7gdp1KMGw" Reference="2iUtdPPHEESKXZ_Hei2EWQ/EOTukIynVki12q96D1huvQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="mail.google.com/mail/u/0" ContentHash="FY8VpUCjjUi13QghZAXVQg" DesignTimeRectangle="-9736, -9847, 1, 1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H2' innerText='Performing security verification' /&gt;" Guid="87a388a8-e37a-45f0-816f-828c1bd2c56a" Reference="2iUtdPPHEESKXZ_Hei2EWQ/EOTukIynVki12q96D1huvQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Just a moment...' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

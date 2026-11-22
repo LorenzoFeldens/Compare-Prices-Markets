@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="oK0b_DNt-kKzpADJe2gWag" Reference="2iUtdPPHEESKXZ_Hei2EWQ/uq8uXaDFcEyPAJc7xPmBCg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ifood.com.br/delivery/santa-maria-rs/atacadao-santa-maria-patronato-patronato/3e2dc785-c4bb-40d4-8bf9-1c217d939ea9" ContentHash="mXpXvtxBoEeCuX4jcG2Hug" DesignTimeRectangle="1376, 950, 478, 63" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Escolher forma de pagamento' aria-role='button' /&gt;" Guid="aaae2db8-03ff-4036-8fab-9d850bf59643" Reference="2iUtdPPHEESKXZ_Hei2EWQ/uq8uXaDFcEyPAJc7xPmBCg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='| undefined | iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5b74c076f099a8f115621e5c36b067cd.jpg" xmlns="">0zmEiCqnnZEaLD4Z6ZkStdA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

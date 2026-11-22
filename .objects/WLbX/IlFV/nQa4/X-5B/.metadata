@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Checkout - Delivery Options List",
+  "Type": "Element",
+  "TaxonomyType": "Container",
+  "Id": "X-5BjcB_oUaNv-Pe0rqshg",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/X-5BjcB_oUaNv-Pe0rqshg",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "Created": "2026-11-22T11:01:45.6714339Z",
+  "Updated": "2026-11-22T11:01:45.6714339Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

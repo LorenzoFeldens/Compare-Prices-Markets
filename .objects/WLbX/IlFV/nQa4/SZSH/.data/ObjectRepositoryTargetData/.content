@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DSx3-Exwa0m8uS0EEc0ufw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ifood.com.br/delivery/santa-maria-rs/carrefour-hiper---santa-maria-centro/cd0d7313-a9d8-4bc2-b6e7-6bf1a2762019" DesignTimeRectangle="977, 294, 333, 24" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='promotion-tag__item__label' tag='P' /&gt;" Guid="0ed02a34-391f-484a-8225-db584bb7f636" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Carrefour Hiper - Santa Maria | SANTA MARIA | iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset X="0" Y="0" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="2f21d913647eeaa4c89fd27a2b368e77.jpg" xmlns="">0fhqbfWQWs0a5LELboQ91wg</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

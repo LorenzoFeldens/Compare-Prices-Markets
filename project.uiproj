@@ -1,0 +1,6 @@
+{
+  "Name": "Compare Prices Markets",
+  "ProjectType": "Process",
+  "Description": "Compares the price of a shopping list across iFood markets and e-mails the result.",
+  "MainFile": "Main.xaml"
+}

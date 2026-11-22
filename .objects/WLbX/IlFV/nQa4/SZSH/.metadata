@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Market Page - Free Delivery Label",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "SZSHW-u-10a7HLo5Psh1vg",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/SZSHW-u-10a7HLo5Psh1vg",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "Created": "2026-11-22T11:00:52.8738679Z",
+  "Updated": "2026-11-22T11:00:52.8738679Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

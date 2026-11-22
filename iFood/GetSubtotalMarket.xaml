@@ -1,0 +1,298 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetSubtotalMarket" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_MarketName" Type="InArgument(x:String)" />
+    <x:Property Name="in_FreeDelivery" Type="InArgument(x:String)" />
+    <x:Property Name="in_MissingItems" Type="InArgument(scg:List(x:String))" />
+    <x:Property Name="io_MarketResults" Type="InOutArgument(njl:JArray)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Activities.System.FileOperations</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Sdk.Activities</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Microsoft.Rest.ClientRuntime.Azure</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.AsyncEnumerable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Opens the cart and the checkout page (where iFood already selects the first delivery option) and reads the market name, the delivery options text, the order totals (subtotal, service fee, delivery fee, total) and, when shown, the minimum-order warning ('Checkout - Minimum Order Warning'). Builds one JSON object with the first delivery option and adds it to io_MarketResults. The object is added only at the end, so a retry does not duplicate it." DisplayName="GetSubtotalMarket" sap:VirtualizedContainerService.HintSize="965.2,2736" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Attach – iFood browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="686.4,2712.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_Browser]" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="04119f67-2157-4a4b-899f-ba274a4b0d52" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="684.8,2591.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="marketTitle" />
+              <Variable x:TypeArguments="x:String" Name="deliveriesText" />
+              <Variable x:TypeArguments="x:String" Name="totalsText" />
+              <Variable x:TypeArguments="x:String" Default="[String.Empty]" Name="minimumText" />
+              <Variable x:TypeArguments="njl:JObject" Name="marketResult" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click – Open cart" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="651.2,265.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="04119f67-2157-4a4b-899f-ba274a4b0d52" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="ifood.com.br/delivery/santa-maria-rs/atacadao-santa-maria-patronato-patronato/3e2dc785-c4bb-40d4-8bf9-1c217d939ea9" ContentHash="NPnrYZSDNkCADe-HoieTFQ" DesignTimeRectangle="1765, 183, 124, 55" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-label='Sacola*' tag='BUTTON' class='header-cart header-cart--has-items' /&gt;" Guid="0f649b03-cb2b-497d-85a6-5bd0b2e229e5" InformativeScreenshot="87b2e942ed36b5708442014cf1ee0550.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/SWQBKCRm6kqm-pUYt7NVuw" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Atacadão Santa Maria Patronato | SANTA MARIA | iFood' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1818, 193, 56, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='header-cart__cost' tag='SPAN' /&gt;" Guid="b86e5c59-cf39-44d1-804f-8aec678f37d9" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="ifood.com.br/delivery/santa-maria-rs/atacadao-santa-maria-patronato-patronato/3e2dc785-c4bb-40d4-8bf9-1c217d939ea9" ContentHash="oK0b_DNt-kKzpADJe2gWag" DesignTimeRectangle="1376, 950, 478, 63" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Escolher forma de pagamento' aria-role='button' /&gt;" Guid="aaae2db8-03ff-4036-8fab-9d850bf59643" InformativeScreenshot="5b74c076f099a8f115621e5c36b067cd.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/uq8uXaDFcEyPAJc7xPmBCg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='| undefined | iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click – Choose payment (summary)" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="651.2,265.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="04119f67-2157-4a4b-899f-ba274a4b0d52" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="ifood.com.br/delivery/santa-maria-rs/atacadao-santa-maria-patronato-patronato/3e2dc785-c4bb-40d4-8bf9-1c217d939ea9" ContentHash="oK0b_DNt-kKzpADJe2gWag" DesignTimeRectangle="1376, 950, 478, 63" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Escolher forma de pagamento' aria-role='button' /&gt;" Guid="aaae2db8-03ff-4036-8fab-9d850bf59643" InformativeScreenshot="5b74c076f099a8f115621e5c36b067cd.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/uq8uXaDFcEyPAJc7xPmBCg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='| undefined | iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="ifood.com.br/pedido/finalizar" ContentHash="90yiOIH-zUagEg-QFGkujg" DesignTimeRectangle="102, 255, 590, 95" DesignTimeScaleFactor="1" ElementType="Container" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='swiper-wrapper' parentid='__next' tag='DIV' /&gt;" Guid="87c17cc7-d035-4c93-9bfb-4ba7a525e309" InformativeScreenshot="207eaca3e4e4f879238a9a8db9f18ba1.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/X-5BjcB_oUaNv-Pe0rqshg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Delivery de Comida e Mercado - iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.PointOffset>
+                        <uix:PointOffset />
+                      </uix:TargetAnchorable.PointOffset>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innerText" DisplayName="Get Text – Market name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="651.2,195.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" Result="[marketTitle]" ScopeIdentifier="04119f67-2157-4a4b-899f-ba274a4b0d52" Version="V5">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable BrowserURL="ifood.com.br/pedido/finalizar" ContentHash="0meX0Su-qkimOJad48WU2w" DesignTimeRectangle="1228, 356, 287, 52" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='restaurant-cart-header__title' tag='A' /&gt;" Guid="b5eab7a4-8103-47fb-89f9-5fc6048f2957" InformativeScreenshot="fa7f53cafe1e054ed0b85f18eed1e9bf.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/4iEcFMKmEkmfj7fwRDbiaQ" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Delivery de Comida e Mercado - iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetAttributeGeneric.Target>
+            </uix:NGetAttributeGeneric>
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innerText" DisplayName="Get Text – Delivery options" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="651.2,195.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[deliveriesText]" ScopeIdentifier="04119f67-2157-4a4b-899f-ba274a4b0d52" Version="V5">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable BrowserURL="ifood.com.br/pedido/finalizar" ContentHash="90yiOIH-zUagEg-QFGkujg" DesignTimeRectangle="102, 255, 590, 95" DesignTimeScaleFactor="1" ElementType="Container" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='swiper-wrapper' parentid='__next' tag='DIV' /&gt;" Guid="87c17cc7-d035-4c93-9bfb-4ba7a525e309" InformativeScreenshot="207eaca3e4e4f879238a9a8db9f18ba1.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/X-5BjcB_oUaNv-Pe0rqshg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Delivery de Comida e Mercado - iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NGetAttributeGeneric.Target>
+            </uix:NGetAttributeGeneric>
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innerText" DisplayName="Get Text – Order totals" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="651.2,195.2" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[totalsText]" ScopeIdentifier="04119f67-2157-4a4b-899f-ba274a4b0d52" Version="V5">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable BrowserURL="newtab" ContentHash="MEm25fsqtkyJlg50qk-EJw" DesignTimeRectangle="1228, 721, 411, 191" ElementType="Container" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='restaurant-cart-footer restaurant-cart-footer__button--hide' tag='DIV' /&gt;" Guid="62048254-33b7-4fa9-b407-37cd78c4831e" InformativeScreenshot="bd0765b443c2df07b52d53bef58dd928.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/0Wd5yRjfXE6izPESU9FiMg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Delivery de Comida e Mercado - iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NGetAttributeGeneric.Target>
+            </uix:NGetAttributeGeneric>
+            <uix:NCheckState DisplayName="Check – Minimum order warning shown" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="651.2,680.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="04119f67-2157-4a4b-899f-ba274a4b0d52" Timeout="2" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Warning shown" sap:VirtualizedContainerService.HintSize="649.6,246.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innerText" DisplayName="Get Text – Minimum order warning" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="616,186.4" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[minimumText]" ScopeIdentifier="04119f67-2157-4a4b-899f-ba274a4b0d52" Version="V5">
+                    <uix:NGetAttributeGeneric.Target>
+                      <uix:TargetAnchorable BrowserURL="ifood.com.br/pedido/finalizar" ContentHash="ZijM7VkxzUmLBOidVgHIxA" DesignTimeRectangle="846, 229, 418, 93" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='restaurant-cart__warning' parentid='__next' tag='DIV' /&gt;" Guid="c77ff8a1-5a39-4ff3-9dd1-ab2ca4d86b0f" InformativeScreenshot="dd370b68f10d361cd3d3784617353a77.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/f9GbeV_EUki8IRlx6udwwQ" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Delivery de Comida e Mercado - iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NGetAttributeGeneric.Target>
+                  </uix:NGetAttributeGeneric>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="No warning" sap:VirtualizedContainerService.HintSize="649.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="ifood.com.br/pedido/finalizar" ContentHash="ZijM7VkxzUmLBOidVgHIxA" DesignTimeRectangle="846, 229, 418, 93" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='restaurant-cart__warning' parentid='__next' tag='DIV' /&gt;" Guid="c77ff8a1-5a39-4ff3-9dd1-ab2ca4d86b0f" InformativeScreenshot="dd370b68f10d361cd3d3784617353a77.jpg" Reference="2iUtdPPHEESKXZ_Hei2EWQ/f9GbeV_EUki8IRlx6udwwQ" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Delivery de Comida e Mercado - iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Builds the market result. The first delivery option is selected by iFood when the checkout page loads,&#xA;' so the totals and the delivery shown here are for that option.&#xA;Dim pt = System.Globalization.CultureInfo.GetCultureInfo(&quot;pt-BR&quot;)&#xA;Dim rx = Function(text As String, pattern As String) As String&#xA;    Dim m = System.Text.RegularExpressions.Regex.Match(If(text, &quot;&quot;), pattern)&#xA;    Return If(m.Success, System.Text.RegularExpressions.Regex.Replace(m.Groups(1).Value, &quot;\s+&quot;, &quot; &quot;).Trim(), &quot;&quot;)&#xA;End Function&#xA;Dim toNumber = Function(value As String) As Decimal&#xA;    If value.StartsWith(&quot;Grátis&quot;, StringComparison.OrdinalIgnoreCase) Then Return 0D&#xA;    Return Decimal.Parse(System.Text.RegularExpressions.Regex.Match(value, &quot;[\d\.]+,\d{2}&quot;).Value, pt)&#xA;End Function&#xA;Const amount As String = &quot;(Grátis|R\$\s?[\d\.]+,\d{2})&quot;&#xA;Dim total = rx(totalsText, &quot;(?&lt;!Sub)Total[\s\S]{0,5}?&quot; &amp; amount)&#xA;If total = &quot;&quot; Then Throw New Exception(&quot;Could not read the total of market '&quot; &amp; marketName &amp; &quot;'. Text read: &quot; &amp; totalsText)&#xA;&#xA;' First delivery card in the carousel text, e.g. &quot;Entrega agendada?Seg, 09:00-11:00R$ 7,99 Entrega agendada?...&quot;&#xA;' (the &quot;?&quot; is the help icon between the type and the date/time).&#xA;Dim delivery As Newtonsoft.Json.Linq.JObject = Nothing&#xA;Dim first = System.Text.RegularExpressions.Regex.Match(System.Text.RegularExpressions.Regex.Replace(If(deliveriesText, &quot;&quot;), &quot;\s+&quot;, &quot; &quot;), &quot;^\s*(?&lt;label&gt;.*?)(?&lt;price&gt;R\$\s?[\d\.]+,\d{2}|Grátis)&quot;)&#xA;If first.Success Then&#xA;    Dim label = first.Groups(&quot;label&quot;).Value.Trim()&#xA;    Dim parts = System.Text.RegularExpressions.Regex.Match(label, &quot;^(?&lt;t&gt;[^?\uFFFD]+?)\s*[?\uFFFD]\s*(?&lt;q&gt;.+)$&quot;)&#xA;    delivery = New Newtonsoft.Json.Linq.JObject(&#xA;        New Newtonsoft.Json.Linq.JProperty(&quot;tipo&quot;, If(parts.Success, parts.Groups(&quot;t&quot;).Value.Trim(), &quot;&quot;)),&#xA;        New Newtonsoft.Json.Linq.JProperty(&quot;quando&quot;, If(parts.Success, parts.Groups(&quot;q&quot;).Value.Trim(), label)),&#xA;        New Newtonsoft.Json.Linq.JProperty(&quot;valor&quot;, first.Groups(&quot;price&quot;).Value.Trim()))&#xA;End If&#xA;&#xA;result = New Newtonsoft.Json.Linq.JObject(&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;mercadoPesquisado&quot;, marketName),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;mercado&quot;, If(String.IsNullOrWhiteSpace(marketTitle), marketName, marketTitle.Trim())),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;status&quot;, &quot;ok&quot;),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;faltaParaEntregaGratis&quot;, If(freeDelivery, &quot;&quot;)),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;subtotal&quot;, rx(totalsText, &quot;Subtotal[\s\S]{0,5}?&quot; &amp; amount)),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;taxaServico&quot;, rx(totalsText, &quot;Taxa de serviço[\s\S]{0,5}?&quot; &amp; amount)),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;taxaEntrega&quot;, rx(totalsText, &quot;Taxa de entrega[\s\S]{0,5}?&quot; &amp; amount)),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;total&quot;, total),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;totalNumero&quot;, toNumber(total)),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;entrega&quot;, delivery),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;pedidoMinimo&quot;, If(System.Text.RegularExpressions.Regex.Match(If(minimumText, &quot;&quot;), &quot;R\$\s?[\d\.]+,\d{2}&quot;).Success, System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Match(minimumText, &quot;R\$\s?[\d\.]+,\d{2}&quot;).Value, &quot;\s+&quot;, &quot; &quot;), System.Text.RegularExpressions.Regex.Replace(If(minimumText, &quot;&quot;), &quot;\s+&quot;, &quot; &quot;).Trim())),&#xA;    New Newtonsoft.Json.Linq.JProperty(&quot;itensNaoEncontrados&quot;, New Newtonsoft.Json.Linq.JArray(If(missingItems, New List(Of String)).ToArray())))" DisplayName="Invoke Code – Build market result" sap:VirtualizedContainerService.HintSize="651.2,400.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+              <ui:InvokeCode.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="marketName">[in_MarketName]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="marketTitle">[marketTitle]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="freeDelivery">[in_FreeDelivery]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="totalsText">[totalsText]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="minimumText">[minimumText]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="deliveriesText">[deliveriesText]</InArgument>
+                <InArgument x:TypeArguments="scg:List(x:String)" x:Key="missingItems">[in_MissingItems]</InArgument>
+                <OutArgument x:TypeArguments="njl:JObject" x:Key="result">[marketResult]</OutArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+            <InvokeMethod DisplayName="Invoke – Add market result" sap:VirtualizedContainerService.HintSize="651.2,167.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Add">
+              <InvokeMethod.TargetObject>
+                <InArgument x:TypeArguments="njl:JArray">[io_MarketResults]</InArgument>
+              </InvokeMethod.TargetObject>
+              <InArgument x:TypeArguments="njl:JToken">[marketResult]</InArgument>
+            </InvokeMethod>
+            <ui:LogMessage DisplayName="Log – Checkout values" sap:VirtualizedContainerService.HintSize="651.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Market '&quot; &amp; in_MarketName &amp; &quot;': total &quot; &amp; marketResult(&quot;total&quot;).ToString &amp; &quot;, delivery &quot; &amp; If(marketResult(&quot;entrega&quot;).Type = Newtonsoft.Json.Linq.JTokenType.Null, &quot;not read&quot;, marketResult(&quot;entrega&quot;)(&quot;quando&quot;).ToString &amp; &quot; &quot; &amp; marketResult(&quot;entrega&quot;)(&quot;valor&quot;).ToString) &amp; &quot;.&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Version="V3" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

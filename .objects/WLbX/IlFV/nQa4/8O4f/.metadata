@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Home - Market Search Box",
+  "Type": "Element",
+  "TaxonomyType": "Container",
+  "Id": "8O4fKkRkP0uC-mHYLxqbNw",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/8O4fKkRkP0uC-mHYLxqbNw",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "Created": "2026-11-20T18:05:48.8030901Z",
+  "Updated": "2026-11-22T11:00:52.5515565Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

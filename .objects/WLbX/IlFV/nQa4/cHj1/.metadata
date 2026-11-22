@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Product Search - Quantity Counter",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "cHj158ldbEyBTRPW8NaoYQ",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/cHj158ldbEyBTRPW8NaoYQ",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "Created": "2026-11-21T21:19:31.6279091Z",
+  "Updated": "2026-11-22T11:00:52.1428541Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

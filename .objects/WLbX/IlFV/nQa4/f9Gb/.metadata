@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Checkout - Minimum Order Warning",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "f9GbeV_EUki8IRlx6udwwQ",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/f9GbeV_EUki8IRlx6udwwQ",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "Created": "2026-11-22T12:06:08.7125899Z",
+  "Updated": "2026-11-22T12:06:08.7125899Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

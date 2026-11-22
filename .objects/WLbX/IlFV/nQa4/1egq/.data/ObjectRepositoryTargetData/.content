@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KTMtXU5EJUi0YDPFZD-TRw" Reference="2iUtdPPHEESKXZ_Hei2EWQ/1egq2ExjdUyAX85LilZdWA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ifood.com.br/delivery/santa-maria-rs/carrefour-hiper---santa-maria-centro/cd0d7313-a9d8-4bc2-b6e7-6bf1a2762019" ContentHash="s1xsJ4MYakaw1boZ0rkrfg" DesignTimeRectangle="484, 406, 324, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H2' innertext='Foram encontrados 0 resultados*' /&gt;" Guid="acef1aa3-9330-4410-8915-d666ded6d77d" Reference="2iUtdPPHEESKXZ_Hei2EWQ/1egq2ExjdUyAX85LilZdWA" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Carrefour Hiper - Santa Maria | SANTA MARIA | iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9dca4e3945d220981666f964e216e7ff.jpg" xmlns="">07ZYvUom3uUOZTFOQouZ0ew</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

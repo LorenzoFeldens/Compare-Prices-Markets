@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Product Search - Increase Quantity Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "ENc4iXDHBEGxP6ot11eJRQ",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/ENc4iXDHBEGxP6ot11eJRQ",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "Created": "2026-11-20T13:36:35.6037409Z",
+  "Updated": "2026-11-22T11:00:52.2094887Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

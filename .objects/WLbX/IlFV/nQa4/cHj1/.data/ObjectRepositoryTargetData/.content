@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VPE9J6Q1XEufRIKje_IidA" Reference="2iUtdPPHEESKXZ_Hei2EWQ/cHj158ldbEyBTRPW8NaoYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ifood.com.br/delivery/santa-maria-rs/atacadao-santa-maria-patronato-patronato/3e2dc785-c4bb-40d4-8bf9-1c217d939ea9" ContentHash="aqAsb0zMEUGl8oWVg9MUyA" DesignTimeRectangle="440, 516, 24, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='marmita-counter__value' parentid='__next' tag='DIV' /&gt;" Guid="1562828b-4f37-4b11-935e-4b90bf2d3302" Reference="2iUtdPPHEESKXZ_Hei2EWQ/cHj158ldbEyBTRPW8NaoYQ" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Atacadão Santa Maria Patronato | SANTA MARIA | iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="35a98f8bdfc46e126112bad1fdf43bfb.jpg" xmlns="">0nC3qLcPx0kqk3HaKXuEZ1Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

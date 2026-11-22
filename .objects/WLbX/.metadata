@@ -1,0 +1,15 @@
+﻿{
+  "Name": "iFood Web",
+  "Type": "App",
+  "Id": "WLbXV62bvkSUjmQj2T5rmQ",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/WLbXV62bvkSUjmQj2T5rmQ",
+  "Created": "2026-11-20T12:48:42.9387339Z",
+  "Updated": "2026-11-22T11:00:51.9903991Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

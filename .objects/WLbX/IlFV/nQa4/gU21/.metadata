@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Home - First Market Result",
+  "Type": "Element",
+  "TaxonomyType": "Container",
+  "Id": "gU21EBQ8TEiWPEI0qbGHHA",
+  "Reference": "2iUtdPPHEESKXZ_Hei2EWQ/gU21EBQ8TEiWPEI0qbGHHA",
+  "ParentRef": "2iUtdPPHEESKXZ_Hei2EWQ/nQa4Vi29T0uWFgOnWKC6XQ",
+  "Created": "2026-11-20T18:07:05.2542472Z",
+  "Updated": "2026-11-22T11:00:52.2839088Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

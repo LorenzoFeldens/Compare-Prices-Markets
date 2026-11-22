@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0meX0Su-qkimOJad48WU2w" Reference="2iUtdPPHEESKXZ_Hei2EWQ/4iEcFMKmEkmfj7fwRDbiaQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="ifood.com.br/pedido/finalizar" ContentHash="KPQPncZgdUe3RJrbMb2Eww" DesignTimeRectangle="1228, 356, 287, 52" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='restaurant-cart-header__title' tag='A' /&gt;" Guid="b5eab7a4-8103-47fb-89f9-5fc6048f2957" Reference="2iUtdPPHEESKXZ_Hei2EWQ/4iEcFMKmEkmfj7fwRDbiaQ" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='fstr.device_id=b56176fe-26ee-4685-8dff-998cd565d6da&amp;amp;fstr.device_data=%7B%22platform%22%3A%22WEB%22%2C%22system%22%3A%22Windows%22%2C%22systemVersion%22%3A%2210%22%2C%22appVersion%22%3A%229.182.2%22%2C%22sdkVersion%22%3A%223.2.9%22%2C%22vendorId%22%3Anull%2*' title='Delivery de Comida e Mercado - iFood' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="fa7f53cafe1e054ed0b85f18eed1e9bf.jpg" xmlns="">0uEXDpAodl0COEqNPe86zwg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
