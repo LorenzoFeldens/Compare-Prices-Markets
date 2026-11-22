@@ -1,4 +1,4 @@
-# Fluxo do processo – Compare Prices Markets
+# Fluxo do processo – Comparação de Preços Ifood
 
 Este documento descreve, passo a passo, o que o robô faz. O ponto de entrada é o [`Main.xaml`](Main.xaml).
 
