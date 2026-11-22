@@ -1,4 +1,4 @@
-# Compare Prices Markets
+# Comparação de Preços Ifood
 
 Robô UiPath que compara o preço de uma mesma lista de compras em vários mercados do **iFood** e envia o
 resultado por e-mail.
