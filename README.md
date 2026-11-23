@@ -3,12 +3,6 @@
 Robô UiPath que compara o preço de uma mesma lista de compras em vários mercados do **iFood** e envia o
 resultado por e-mail.
 
-## Demonstração
-
-[![Assista ao robô em execução](https://img.shields.io/badge/YouTube-Assista%20à%20demonstração-red?logo=youtube)](YOUTUBE_URL)
-
-> 🎥 Vídeo do workflow em execução: **[YOUTUBE_URL](YOUTUBE_URL)**
-
 ## O que ele faz
 
 1. Lê a lista de produtos e de mercados em uma planilha do Google.
