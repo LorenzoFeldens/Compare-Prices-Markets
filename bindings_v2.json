@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "activityDisplayName": "Send Email – Report",
+      "activityId": "SendEmailConnections_1",
+      "resource": "Connection",
+      "key": "d660fbe8-6939-4776-bf9e-fa0e170e3a0b",
+      "id": "Connectiond660fbe8-6939-4776-bf9e-fa0e170e3a0bd660fbe8-6939-4776-bf9e-fa0e170e3a0bFalse",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "d660fbe8-6939-4776-bf9e-fa0e170e3a0b",
+          "isExpression": false,
+          "displayName": "Connection",
+          "description": "The connection to be used"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Connector": "uipath-google-gmail",
+        "UseConnectionService": "True"
+      }
+    },
+    {
+      "activityDisplayName": "Create App Task – ShoppingDecision",
+      "activityId": "CreateUserAction_1",
+      "resource": "app",
+      "key": "ShoppingDecision",
+      "id": "appShoppingDecisionShoppingDecisionFalse",
+      "value": {
+        "name": {
+          "defaultValue": "ShoppingDecision",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "activityDisplayName": "Create App Task – ShoppingDecision",
+      "activityId": "CreateUserAction_1",
+      "resource": "taskCatalog",
+      "id": "taskCatalogShared/ShoppingDecisionFalse",
+      "value": {
+        "folderPath": {
+          "defaultValue": "Shared/ShoppingDecision",
+          "isExpression": false,
+          "displayName": "Orchestrator folder path"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "activityDisplayName": "HTTP – Claude Messages API",
+      "activityId": "ConnectorHttpActivity_1",
+      "resource": "Connection",
+      "key": "06d60bb2-0202-4147-8542-f198bbd24750",
+      "id": "Connection06d60bb2-0202-4147-8542-f198bbd2475006d60bb2-0202-4147-8542-f198bbd24750False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "06d60bb2-0202-4147-8542-f198bbd24750",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "UseConnectionService": "true",
+        "BindingsVersion": "2.2",
+        "Connector": "uipath-anthropic-claude",
+        "ActivityName": "HTTP – Claude Messages API"
+      }
+    }
+  ]
+}
