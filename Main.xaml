@@ -595,6 +595,25 @@
                   </upau:CreateUserAction>
                   <upau:WaitForUserActionAndResume StatusMessage="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait for App Task and Resume – ShoppingDecision" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WaitForUserActionAndResume_1" TaskAction="[taskAction]" TaskInput="[appTask]" TaskOutput="[appTask]" />
                   <ui:LogMessage DisplayName="Log – Decisão de compra" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Decisão ShoppingDecision: &quot; &amp; taskAction &amp; &quot; | Mercado: &quot; &amp; mercadoEscolhido &amp; &quot; | Observação: &quot; &amp; observacao]" />
+                  <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[&quot;&lt;p&gt;Decisão: &lt;b&gt;&quot; &amp; If(taskAction = &quot;Comprar&quot;, &quot;Comprar&quot;, &quot;Não comprar&quot;) &amp; &quot;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mercado: &quot; &amp; System.Net.WebUtility.HtmlEncode(If(mercadoEscolhido, &quot;&quot;)) &amp; If(marketResults.Any(Function(r) r.Value(Of String)(&quot;mercado&quot;) = mercadoEscolhido), &quot; – total &quot; &amp; marketResults.Where(Function(r) r.Value(Of String)(&quot;mercado&quot;) = mercadoEscolhido).Select(Function(r) r.Value(Of String)(&quot;total&quot;)).FirstOrDefault(), &quot;&quot;) &amp; &quot;&lt;/p&gt;&quot; &amp; If(String.IsNullOrWhiteSpace(observacao), &quot;&quot;, &quot;&lt;p&gt;Observação: &quot; &amp; System.Net.WebUtility.HtmlEncode(observacao) &amp; &quot;&lt;/p&gt;&quot;)]" ConnectionId="d660fbe8-6939-4776-bf9e-fa0e170e3a0b" DisplayName="Send Email – Confirmação da decisão" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Decisão de compra: &quot; &amp; If(taskAction = &quot;Comprar&quot;, &quot;Comprar&quot;, &quot;Não comprar&quot;) &amp; &quot; – &quot; &amp; Now.ToString(&quot;dd/MM/yyyy&quot;)]" To="[New String(){sendTo}]" UseConnectionService="True">
+                    <uga:SendEmailConnections.Attachments>
+                      <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+                    </uga:SendEmailConnections.Attachments>
+                    <uga:SendEmailConnections.AttachmentsBackup>
+                      <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:SendEmailConnections.AttachmentsBackup>
+                    <uga:SendEmailConnections.InputTypeBackup>
+                      <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:SendEmailConnections.InputTypeBackup>
+                  </uga:SendEmailConnections>
                 </Sequence>
               </If.Else>
             </If>

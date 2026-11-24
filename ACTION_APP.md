@@ -70,7 +70,8 @@ Feito no `Main.xaml`, depois do envio do e-mail do relatório (sequência "Decis
   entram na lista; o sugerido é o de menor `totalNumero`).
 - Se nenhum mercado teve sucesso, a tarefa não é criada (log de aviso).
 - Senão: **Create App Task** (título "Onde comprar? – dd/MM/yyyy", entradas `RelatorioHtml`, `Mercados`,
-  `MercadoSugerido`, `Resumo`) → **Wait for App Task and Resume** → log com o resultado (`taskAction`), o mercado e a observação.
+  `MercadoSugerido`, `Resumo`) → **Wait for App Task and Resume** → log com o resultado (`taskAction`), o mercado e a observação → e-mail de confirmação para `SendTo`
+  ("Decisão de compra: Comprar/Não comprar – dd/MM/yyyy", com o mercado, o total dele e a observação).
   A tarefa fica na variável `appTask` (`UserActionData`).
 
 O app foi escolhido no Studio Desktop: **ShoppingDecision** 1.0.1, pasta `Shared/ShoppingDecision`. As saídas vão
