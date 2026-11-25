@@ -195,7 +195,7 @@
       <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Compares the price of the shopping list across the markets in the input sheet on iFood and e-mails the result. Settings: Data\Config.xlsx. One failing market is reported and skipped; any other error sends an error e-mail and fails the job." DisplayName="Main" sap:VirtualizedContainerService.HintSize="1030.8,8571.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Compares the price of the shopping list across the markets in the input sheet on iFood and e-mails the result. Settings: Data\Config.xlsx. One failing market is reported and skipped; any other error sends an error e-mail and fails the job." DisplayName="Main" sap:VirtualizedContainerService.HintSize="756.8,9592" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="config" />
       <Variable x:TypeArguments="sd:DataTable" Name="productsDataTable" />
@@ -210,9 +210,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try – Compare prices" sap:VirtualizedContainerService.HintSize="756.8,8548" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try – Compare prices" sap:VirtualizedContainerService.HintSize="756.8,9568.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Run" sap:VirtualizedContainerService.HintSize="755.2,6931.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence DisplayName="Run" sap:VirtualizedContainerService.HintSize="755.2,7952" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -240,25 +240,25 @@
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_MarketsDataTable">[marketsDataTable]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Chrome – iFood (new window)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="721.6,3103.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" OutUiElement="[browser]" ScopeGuid="39a8aee0-99cf-446c-ad95-c8c59f69ace3" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Chrome – iFood (new window)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="721.6,3663.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" OutUiElement="[browser]" ScopeGuid="39a8aee0-99cf-446c-ad95-c8c59f69ace3" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="720,2900" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,3460" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[marketsDataTable]" DisplayName="For Each Market" sap:VirtualizedContainerService.HintSize="686.4,2840" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[marketsDataTable]" DisplayName="For Each Market" sap:VirtualizedContainerService.HintSize="521.6,3400" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="market" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Market" sap:VirtualizedContainerService.HintSize="684.8,2667.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Market" sap:VirtualizedContainerService.HintSize="520,3227.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="marketName" />
                             <Variable x:TypeArguments="scg:List(x:String)" Name="missingItems" />
@@ -270,7 +270,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Assign – Market name" sap:VirtualizedContainerService.HintSize="651.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign DisplayName="Assign – Market name" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[marketName]</OutArgument>
                             </Assign.To>
@@ -278,7 +278,7 @@
                               <InArgument x:TypeArguments="x:String">[market(config("MarketsMarketColumn").ToString).ToString.Trim]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign DisplayName="Assign – Reset missing items" sap:VirtualizedContainerService.HintSize="651.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign DisplayName="Assign – Reset missing items" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
                             <Assign.To>
                               <OutArgument x:TypeArguments="scg:List(x:String)">[missingItems]</OutArgument>
                             </Assign.To>
@@ -286,9 +286,9 @@
                               <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <TryCatch DisplayName="Try – Process market" sap:VirtualizedContainerService.HintSize="651.2,2258.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                          <TryCatch DisplayName="Try – Process market" sap:VirtualizedContainerService.HintSize="486.4,2818.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                             <TryCatch.Try>
-                              <Sequence DisplayName="Process market" sap:VirtualizedContainerService.HintSize="484.8,1644" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence DisplayName="Process market" sap:VirtualizedContainerService.HintSize="484.8,2273.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -335,14 +335,19 @@
                                     <ActivityFunc x:TypeArguments="x:Boolean" />
                                   </ui:RetryScope.Condition>
                                 </ui:RetryScope>
-                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[productsDataTable]" DisplayName="For Each Selected Product" sap:VirtualizedContainerService.HintSize="451.2,201.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[productsDataTable]" DisplayName="For Each Selected Product" sap:VirtualizedContainerService.HintSize="451.2,408.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                   <ui:ForEachRow.Body>
                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="item" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke – Search and add product" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="iFood\SearchProduct.xaml">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke – Search and add product" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="iFood\SearchProduct.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:String" x:Key="in_ItemName">[item(config("ProductsItemColumn").ToString).ToString.Trim]</InArgument>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="in_ItemAmount">[Convert.ToInt32(item(config("ProductsAmountColumn").ToString))]</InArgument>
@@ -354,16 +359,21 @@
                                     </ActivityAction>
                                   </ui:ForEachRow.Body>
                                 </ui:ForEachRow>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke – Read free-delivery label" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="iFood\ReadMarketInfo.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke – Read free-delivery label" sap:VirtualizedContainerService.HintSize="451.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="iFood\ReadMarketInfo.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="ui:UiElement" x:Key="in_Browser">[browser]</InArgument>
                                     <OutArgument x:TypeArguments="x:String" x:Key="out_FreeDelivery">[freeDelivery]</OutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <ui:RetryScope RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry – Read checkout values" sap2010:WorkflowViewState.IdRef="RetryScope_2" LogRetriedExceptions="True" NumberOfRetries="3" RetryInterval="00:00:05">
+                                <ui:RetryScope RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry – Read checkout values" sap:VirtualizedContainerService.HintSize="451.2,286.4" sap2010:WorkflowViewState.IdRef="RetryScope_2" LogRetriedExceptions="True" NumberOfRetries="3" RetryInterval="00:00:05">
                                   <ui:RetryScope.ActivityBody>
                                     <ActivityAction>
-                                      <Sequence DisplayName="Action" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="449.6,80" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke – Read checkout values" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="iFood\GetSubtotalMarket.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="ui:UiElement" x:Key="in_Browser">[browser]</InArgument>
@@ -455,7 +465,7 @@
               </usau:BackupSlot>
             </uga:SendEmailConnections.InputTypeBackup>
           </uga:SendEmailConnections>
-          <Sequence DisplayName="Decisão de compra – Action Center" sap:VirtualizedContainerService.HintSize="721.6,2212.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence DisplayName="Decisão de compra – Action Center" sap:VirtualizedContainerService.HintSize="721.6,2673.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="mercados" />
               <Variable x:TypeArguments="x:String" Name="mercadoSugerido" />
@@ -481,7 +491,7 @@
                 <OutArgument x:TypeArguments="x:String">[mercados]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[String.Join(vbLf, marketResults.Where(Function(r) r.Value(Of String)("status") = "ok").Select(Function(r) r.Value(Of String)("mercado")))]</InArgument>
+                <InArgument x:TypeArguments="x:String">[String.Join(" | ", marketResults.Where(Function(r) r.Value(Of String)("status") = "ok").Select(Function(r) r.Value(Of String)("mercado")))]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign DisplayName="Assign – Mercado mais barato" sap:VirtualizedContainerService.HintSize="616,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -500,7 +510,7 @@
                 <InArgument x:TypeArguments="x:String">[String.Join(vbLf, marketResults.Select(Function(r) If(r.Value(Of String)("status") = "ok", r.Value(Of String)("mercado") &amp; " – " &amp; r.Value(Of String)("total"), r.Value(Of String)("mercadoPesquisado") &amp; " – falhou")))]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[String.IsNullOrWhiteSpace(mercados)]" DisplayName="If – Nenhum mercado para escolher" sap:VirtualizedContainerService.HintSize="616,1423.2" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[String.IsNullOrWhiteSpace(mercados)]" DisplayName="If – Nenhum mercado para escolher" sap:VirtualizedContainerService.HintSize="616,1884" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
@@ -512,7 +522,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,1036" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,1496.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="observacao" />
                     <Variable x:TypeArguments="x:String" Name="mercadoEscolhido" />
@@ -522,28 +532,29 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <upau:CreateUserAction AssignmentCriteria="{x:Reference __ReferenceID0}" AutoCompleteOutcome="{x:Null}" ExternalTag="{x:Null}" Group="{x:Null}" Labels="{x:Null}" PrimaryActionableOutcome="{x:Null}" PrimaryButtonLabel="{x:Null}" ReassignGroup="{x:Null}" ReassignUser="{x:Null}" SecondaryActionableOutcome="{x:Null}" SecondaryButtonLabel="{x:Null}" SolutionTaskCatalog="{x:Null}" TaskCatalog="{x:Null}" TaskFieldsForDesktop="{x:Null}" TaskFieldsForWeb="{x:Null}" TimeoutMs="{x:Null}" TimerDuration="{x:Null}" UserNameOrEmail="{x:Null}" ActionableNotification="False" DisplayName="Create App Task – ShoppingDecision" EndCriteria="TaskCompleted" EnforcePropertyRefresh="False" FolderPath="Shared/ShoppingDecision" sap:VirtualizedContainerService.HintSize="416,688" sap2010:WorkflowViewState.IdRef="CreateUserAction_1" Outcome="Notify" SolutionApp="ShoppingDecision" StartCriteria="TaskCreated" TaskOutput="[appTask]" TaskPriority="Medium" TaskTimerEnabled="False" TaskTitle="[&quot;Onde comprar? – &quot; &amp; Now.ToString(&quot;dd/MM/yyyy&quot;)]">
+                  <upau:CreateUserAction AutoCompleteOutcome="{x:Null}" ExternalTag="{x:Null}" Group="{x:Null}" Labels="{x:Null}" PrimaryActionableOutcome="{x:Null}" PrimaryButtonLabel="{x:Null}" ReassignGroup="{x:Null}" ReassignUser="{x:Null}" SecondaryActionableOutcome="{x:Null}" SecondaryButtonLabel="{x:Null}" SolutionTaskCatalog="{x:Null}" TaskCatalog="{x:Null}" TaskFieldsForDesktop="{x:Null}" TaskFieldsForWeb="{x:Null}" TimeoutMs="{x:Null}" TimerDuration="{x:Null}" UserNameOrEmail="{x:Null}" ActionableNotification="False" DisplayName="Create App Task – ShoppingDecision" EndCriteria="TaskCompleted" EnforcePropertyRefresh="False" FolderPath="Shared/ShoppingDecision" sap:VirtualizedContainerService.HintSize="416,636" sap2010:WorkflowViewState.IdRef="CreateUserAction_1" Outcome="Notify" SolutionApp="ShoppingDecision" StartCriteria="TaskCreated" TaskOutput="[appTask]" TaskPriority="Medium" TaskTimerEnabled="False" TaskTitle="[&quot;Onde comprar? – &quot; &amp; Now.ToString(&quot;dd/MM/yyyy&quot;)]">
                     <upau:CreateUserAction.AppActionData>
-                      <InArgument x:TypeArguments="x:String" x:Key="Mercados">[mercados]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="MercadoSugerido">[mercadoSugerido]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="RelatorioHtml">[htmlBody]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="Resumo">[resumo]</InArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="MercadoEscolhido">[mercadoEscolhido]</OutArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="Observacao">[observacao]</OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Question">["Onde comprar hoje? O total mais baixo foi no " &amp; mercadoSugerido &amp; "."]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Options">[mercados &amp; " | Não comprar"]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Details">[resumo &amp; vbLf &amp; "O relatório completo foi enviado por e-mail."]</InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="Answer">[mercadoEscolhido]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="Comment">[observacao]</OutArgument>
                     </upau:CreateUserAction.AppActionData>
                     <upau:CreateUserAction.AppActionPropertiesMetadata>
-                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Mercados" />
-                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="MercadoSugerido" />
-                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="RelatorioHtml" />
-                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Resumo" />
-                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="MercadoEscolhido" />
-                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Observacao" />
+                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Details" />
+                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Options" />
+                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Question" />
+                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Answer" />
+                      <upama:SchemaPropertiesMetadata Format="{x:Null}" x:Key="Comment" />
                     </upau:CreateUserAction.AppActionPropertiesMetadata>
+                    <upau:CreateUserAction.AssignmentCriteria>
+                      <upat:Criteria Description="SingleUserDescription" Id="SingleUser" Name="Activity_AssignTasks_AssignmentCriteria_SingleUserName" />
+                    </upau:CreateUserAction.AssignmentCriteria>
                     <upau:CreateUserAction.CurrentAppTaskState>
-                      <upama:AppTaskState CodeBehindRuntimeType="{x:Null}" AppId="ID9e3d4102642c4de488cd571d83bb8fce" AppName="ShoppingDecision" AppVersion="1" CodeBehindProcessKey="615474a3-0dae-4e39-ae38-3b6531eb2e32" FolderKey="013599df-ddbb-4a37-b650-57856ebdb975" SemVersion="1.0.1" />
+                      <upama:AppTaskState CodeBehindRuntimeType="{x:Null}" AppId="ID9e3d4102642c4de488cd571d83bb8fce" AppName="ShoppingDecision" AppVersion="1" CodeBehindProcessKey="615474a3-0dae-4e39-ae38-3b6531eb2e32" FolderKey="013599df-ddbb-4a37-b650-57856ebdb975" SemVersion="1.0.3" />
                     </upau:CreateUserAction.CurrentAppTaskState>
                     <upau:CreateUserAction.ReassignCriteria>
-                      <upat:Criteria x:Name="__ReferenceID0" Description="SingleUserDescription" Id="SingleUser" Name="Activity_AssignTasks_AssignmentCriteria_SingleUserName" />
+                      <upat:Criteria Description="SingleUserDescription" Id="SingleUser" Name="Activity_AssignTasks_AssignmentCriteria_SingleUserName" />
                     </upau:CreateUserAction.ReassignCriteria>
                     <upau:CreateUserAction.SolutionAppResources>
                       <scg:Dictionary x:TypeArguments="x:String, x:String" />
@@ -551,39 +562,33 @@
                     <upau:CreateUserAction.State>
                       <upama:RecordDynamicActionPropertiesState>
                         <upama:RecordDynamicActionPropertiesState.AllowedActions>
-                          <scg:List x:TypeArguments="x:String" Capacity="2">
-                            <x:String>Comprar</x:String>
-                            <x:String>NaoComprar</x:String>
+                          <scg:List x:TypeArguments="x:String" Capacity="1">
+                            <x:String>Responder</x:String>
                           </scg:List>
                         </upama:RecordDynamicActionPropertiesState.AllowedActions>
                         <upama:RecordDynamicActionPropertiesState.SelectedFields>
-                          <scg:List x:TypeArguments="upama:DynamicActionDefinitionSchemaField" Capacity="6">
-                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="In" IsRequired="False" Name="RelatorioHtml" PropertyType="System.String">
+                          <scg:List x:TypeArguments="upama:DynamicActionDefinitionSchemaField" Capacity="5">
+                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="In" IsRequired="False" Name="Question" PropertyType="System.String">
                               <upama:DynamicActionDefinitionSchemaField.ArgumentValue>
-                                <InArgument x:TypeArguments="x:String">[htmlBody]</InArgument>
+                                <InArgument x:TypeArguments="x:String">["Onde comprar hoje? O total mais baixo foi no " &amp; mercadoSugerido &amp; "."]</InArgument>
                               </upama:DynamicActionDefinitionSchemaField.ArgumentValue>
                             </upama:DynamicActionDefinitionSchemaField>
-                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="In" IsRequired="False" Name="Mercados" PropertyType="System.String">
+                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="In" IsRequired="False" Name="Options" PropertyType="System.String">
                               <upama:DynamicActionDefinitionSchemaField.ArgumentValue>
-                                <InArgument x:TypeArguments="x:String">[mercados]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[mercados &amp; " | Não comprar"]</InArgument>
                               </upama:DynamicActionDefinitionSchemaField.ArgumentValue>
                             </upama:DynamicActionDefinitionSchemaField>
-                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="In" IsRequired="False" Name="MercadoSugerido" PropertyType="System.String">
+                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="In" IsRequired="False" Name="Details" PropertyType="System.String">
                               <upama:DynamicActionDefinitionSchemaField.ArgumentValue>
-                                <InArgument x:TypeArguments="x:String">[mercadoSugerido]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[resumo &amp; vbLf &amp; "O relatório completo foi enviado por e-mail."]</InArgument>
                               </upama:DynamicActionDefinitionSchemaField.ArgumentValue>
                             </upama:DynamicActionDefinitionSchemaField>
-                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="In" IsRequired="False" Name="Resumo" PropertyType="System.String">
-                              <upama:DynamicActionDefinitionSchemaField.ArgumentValue>
-                                <InArgument x:TypeArguments="x:String">[resumo]</InArgument>
-                              </upama:DynamicActionDefinitionSchemaField.ArgumentValue>
-                            </upama:DynamicActionDefinitionSchemaField>
-                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="Out" IsRequired="True" Name="MercadoEscolhido" PropertyType="System.String">
+                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="Out" IsRequired="True" Name="Answer" PropertyType="System.String">
                               <upama:DynamicActionDefinitionSchemaField.ArgumentValue>
                                 <OutArgument x:TypeArguments="x:String">[mercadoEscolhido]</OutArgument>
                               </upama:DynamicActionDefinitionSchemaField.ArgumentValue>
                             </upama:DynamicActionDefinitionSchemaField>
-                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="Out" IsRequired="False" Name="Observacao" PropertyType="System.String">
+                            <upama:DynamicActionDefinitionSchemaField PropertyFormat="{x:Null}" Direction="Out" IsRequired="False" Name="Comment" PropertyType="System.String">
                               <upama:DynamicActionDefinitionSchemaField.ArgumentValue>
                                 <OutArgument x:TypeArguments="x:String">[observacao]</OutArgument>
                               </upama:DynamicActionDefinitionSchemaField.ArgumentValue>
@@ -594,8 +599,8 @@
                     </upau:CreateUserAction.State>
                   </upau:CreateUserAction>
                   <upau:WaitForUserActionAndResume StatusMessage="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait for App Task and Resume – ShoppingDecision" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WaitForUserActionAndResume_1" TaskAction="[taskAction]" TaskInput="[appTask]" TaskOutput="[appTask]" />
-                  <ui:LogMessage DisplayName="Log – Decisão de compra" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Decisão ShoppingDecision: &quot; &amp; taskAction &amp; &quot; | Mercado: &quot; &amp; mercadoEscolhido &amp; &quot; | Observação: &quot; &amp; observacao]" />
-                  <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[&quot;&lt;p&gt;Decisão: &lt;b&gt;&quot; &amp; If(taskAction = &quot;Comprar&quot;, &quot;Comprar&quot;, &quot;Não comprar&quot;) &amp; &quot;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mercado: &quot; &amp; System.Net.WebUtility.HtmlEncode(If(mercadoEscolhido, &quot;&quot;)) &amp; If(marketResults.Any(Function(r) r.Value(Of String)(&quot;mercado&quot;) = mercadoEscolhido), &quot; – total &quot; &amp; marketResults.Where(Function(r) r.Value(Of String)(&quot;mercado&quot;) = mercadoEscolhido).Select(Function(r) r.Value(Of String)(&quot;total&quot;)).FirstOrDefault(), &quot;&quot;) &amp; &quot;&lt;/p&gt;&quot; &amp; If(String.IsNullOrWhiteSpace(observacao), &quot;&quot;, &quot;&lt;p&gt;Observação: &quot; &amp; System.Net.WebUtility.HtmlEncode(observacao) &amp; &quot;&lt;/p&gt;&quot;)]" ConnectionId="d660fbe8-6939-4776-bf9e-fa0e170e3a0b" DisplayName="Send Email – Confirmação da decisão" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Decisão de compra: &quot; &amp; If(taskAction = &quot;Comprar&quot;, &quot;Comprar&quot;, &quot;Não comprar&quot;) &amp; &quot; – &quot; &amp; Now.ToString(&quot;dd/MM/yyyy&quot;)]" To="[New String(){sendTo}]" UseConnectionService="True">
+                  <ui:LogMessage DisplayName="Log – Decisão de compra" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Decisão ShoppingDecision: &quot; &amp; taskAction &amp; &quot; | Resposta: &quot; &amp; mercadoEscolhido &amp; &quot; | Observação: &quot; &amp; observacao]" />
+                  <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[&quot;&lt;p&gt;Decisão: &lt;b&gt;&quot; &amp; If(mercadoEscolhido = &quot;Não comprar&quot;, &quot;Não comprar&quot;, &quot;Comprar&quot;) &amp; &quot;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mercado: &quot; &amp; System.Net.WebUtility.HtmlEncode(If(mercadoEscolhido, &quot;&quot;)) &amp; If(marketResults.Any(Function(r) r.Value(Of String)(&quot;mercado&quot;) = mercadoEscolhido), &quot; – total &quot; &amp; marketResults.Where(Function(r) r.Value(Of String)(&quot;mercado&quot;) = mercadoEscolhido).Select(Function(r) r.Value(Of String)(&quot;total&quot;)).FirstOrDefault(), &quot;&quot;) &amp; &quot;&lt;/p&gt;&quot; &amp; If(String.IsNullOrWhiteSpace(observacao), &quot;&quot;, &quot;&lt;p&gt;Observação: &quot; &amp; System.Net.WebUtility.HtmlEncode(observacao) &amp; &quot;&lt;/p&gt;&quot;)]" ConnectionId="d660fbe8-6939-4776-bf9e-fa0e170e3a0b" DisplayName="Send Email – Confirmação da decisão" sap:VirtualizedContainerService.HintSize="416,504" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Decisão de compra: &quot; &amp; If(mercadoEscolhido = &quot;Não comprar&quot;, &quot;Não comprar&quot;, &quot;Comprar&quot;) &amp; &quot; – &quot; &amp; Now.ToString(&quot;dd/MM/yyyy&quot;)]" To="[New String(){sendTo}]" UseConnectionService="True">
                     <uga:SendEmailConnections.Attachments>
                       <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
                     </uga:SendEmailConnections.Attachments>
